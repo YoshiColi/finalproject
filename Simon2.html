@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simon's Page</title>
+    <style>
+        body {
+            background: url('https://www.outlooktravelmag.com/media/Association-MAIN-IMAGE-jpg-1536x884.webp') no-repeat center center fixed;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+        .overlay {
+            background-color: rgba(255, 255, 255, 0.85);
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            font-family: Georgia, serif;
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            animation: fadeIn 2s ease-in;
+        }
+        h2 {
+            text-align: center;
+            color: #e67e22;
+            font-family: Georgia, serif;
+            margin-bottom: 1.5rem;
+            animation: fadeIn 2s ease-in;
+            transition: all 0.3s ease;
+        }
+        h2:hover {
+            animation: blink 1s step-start infinite;
+        }
+
+        .image-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        .image-container img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+        p {
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+        footer {
+            text-align: center;
+            margin-top: 2rem;
+            padding: 1rem;
+            background-color: #4a90e2;
+            color: white;
+            border-radius: 10px;
+        }
+        footer a {
+            color: white;
+            text-decoration: underline;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes blink {
+            50% { opacity: 0; }
+        }
+        @media (max-width: 600px) {
+            .overlay {
+                margin: 1rem;
+                padding: 1rem;
+            }
+            .image-container {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay">
+        <h1>About Simon / Seungchan Park</h1>
+        <p>Hello! My name is Simon. I am 21 years old and I am from Korea.</p>
+        <p>I spent 15 years living in Azerbaijan, which gave me a unique perspective on different cultures.</p>
+        <p>I graduated from Handong International School and am excited to share my interests!</p>
+
+        <h2>My Interests</h2>
+        <p>I enjoy both indoor climbing and judo. These sports challenge me physically and mentally, helping me build strength, focus, and resilience.</p>
+
+        <div class="image-container">
+            <img src="1234.jpg" alt="Simon Climbing" style="max-width:300px;">
+            <img src="IMG_5368.jpg" alt="Simon with Family" style="max-width:300px;">
+            <img src="IMG_9269.jpg" alt="Simon Practicing Judo" style="max-width:300px;">
+            <img src="IMG_4672.JPG" alt="Simon Judo Training" style="max-width:300px;">
+        </div>
+
+        <h2>My Favorite Athlete</h2>
+        <div class="image-container">
+            <img src="https://img.olympics.com/images/image/private/t_16-9_760/f_auto/primary/qzjhd4uaph3cbcmjkylo" alt="Son Heung-min 1" style="max-width:300px;">
+            <img src="https://img3.yna.co.kr/photo/yna/YH/2021/01/12/PYH2021011200830000700_P4.jpg" alt="Ahn Baul" style="max-width:300px;">
+        </div>
+
+        <footer>
+            Author: Simon | Student ID: [22400276] <br>
+            <a href="https://www.instagram.com/sike02tily/?next=%2F" target="_blank">Instagram: @sike02tily</a>
+        </footer>
+    </div>
+</body>
+</html>

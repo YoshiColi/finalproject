@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    h2 {
+      margin: 0px;
+      padding: 10px;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background-color: lightgray;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    /*changed fadeinmenu and fadebody to fadein*/
+    @keyframes fadein {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    div.header {
+      text-align: center;
+      color: black;
+      background-color: darkgray;
+      font-size: xx-large;
+      padding: 50px;
+      opacity: 0;
+      transform: translateY(45px);
+      animation: fadein ease-in-out forwards 1s;
+    }
+
+    .navi {
+      overflow: hidden;
+      background-color: #2b2b2b;
+      position: sticky;
+      top: 0;
+
+      /*added*/
+      display: flex;
+      height: 40px;
+      align-items: center;
+
+      opacity: 0;
+      transform: translateY(45px);
+      animation: fadein ease-in-out forwards 1s;
+      animation-delay: 0.2s;
+      z-index: 50;
+    }
+
+    .navi a {
+      float: left;
+      color: #ffffff;
+      text-align: center;
+      font-size: 15px; /*font-size changed 20px -> 15px*/
+      text-decoration: none;
+      padding: 20px 20px;
+    }
+
+    .navi a:hover {
+      background-color: rgb(120, 119, 119);
+      color: black;
+    }
+
+    div.body {
+      opacity: 0;
+      transform: translateY(45px);
+      animation: fadein ease-in-out forwards 1s;
+      animation-delay: 0.5s;
+    }
+
+    .imggrid {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+
+    .img-item {
+      position: relative;
+      width: 200px;
+      height: 200px;
+      text-decoration: none;
+      overflow: hidden;
+    }
+
+    .img-item img {
+      width: 100%;
+      height: fit-content; /*changed 100% -> fit-content*/
+      object-fit: cover;
+      transition: opacity 1s ease-in-out;
+    }
+
+    .img-item .title {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: rgba(0, 0, 0, 0.6);
+      color: white;
+      font-size: 24px;
+      transition: opacity 1s ease-in-out, font-size 0.5s;
+    }
+
+    .img-item:hover img {
+      opacity: 0;
+    }
+
+    .img-item:hover .title {
+      opacity: 1;
+      font-size: 30px;
+    }
+    footer {
+      text-align: left;
+      width: 100%;
+
+      color: black;
+      background-color: darkgray;
+      font-size: 15px;
+      font-family: Arial, Helvetica, sans-serif;
+      margin-top: 20px;
+      padding: 20px;
+
+      /*animations*/
+      opacity: 0;
+      transform: translateY(45px);
+      animation: fadein ease-in-out;
+      animation: fadein forwards;
+      animation-duration: 1s;
+      animation-delay: 0s;
+    }
+    .group {
+      display: flex;
+      justify-content: center;
+      margin: 20px;
+
+      width: 100%;
+
+      opacity: 0;
+      transform: translateY(45px);
+      animation: fadein ease-in-out;
+      animation: fadein forwards;
+      animation-duration: 1s;
+      animation-delay: 1s;
+    }
+    .group img {
+      max-width: 500px;
+      width: 50vw;
+      border: solid 5px black;
+    }
+    body {
+      overflow-x: hidden;
+    }
+    .centered {
+      text-align: center;
+      padding: 10px;
+      margin: 20px;
+    }
+    .info {
+      padding: 10px;
+      margin: 10px;
+    }
+  </style>
+  <body>
+    <div class="header">Get to Know Group 2</div>
+    <div class="navi">
+      <a href="index.html">Home</a>
+      <a href="josiah.html">Josiah</a>
+      <a href="Noah.html">Noah</a>
+      <a href="simon.html">Simon</a>
+    </div>
+
+    <div class="body">
+      <h1>Welcome,</h1>
+      <h2>This page will showcase some stuff about us.</h2>
+      <h2>
+        We will share our skills, interests, and other things you may want to
+        know about us. <br />
+        <br />
+      </h2>
+
+      <div class="imggrid">
+        <a href="josiah.html" class="img-item">
+          <img src="KakaoTalk_20250408_193433444.jpg" alt="face" />
+          <div class="title">Josiah</div>
+        </a>
+
+        <a href="Noah.html" class="img-item">
+          <img src="KakaoTalk_20250607_152904128.jpg" alt="face" />
+          <div class="title">Noah</div>
+        </a>
+
+        <a href="simon.html" class="img-item">
+          <img src="simon.png" alt="face" />
+          <div class="title">Simon</div>
+        </a>
+      </div>
+      <p class="centered">
+        *You can click our images to navigate directly to our pages*
+      </p>
+      <br />
+      <br />
+      <h1>About us</h1>
+      <p class="info">
+        We are all students in HGU (Handong Global Univeristy), and are
+        currently taking Intro to Front-end Programming as a class. <br />
+        Our inspiration for this page was for it to be a place where anyone can
+        visit and learn the basics about us as well as our hobbies. <br />
+      </p>
+    </div>
+    <div class="group">
+      <img src="group.jpg" alt="group photo" />
+    </div>
+
+    <footer>
+      Page Author: Josiah Collier & Noah Jedd<br />
+      Created for: Intro to Front-End Programming Course, 2025-1<br />
+      Created : 06/07/2025
+    </footer>
+  </body>
+</html>

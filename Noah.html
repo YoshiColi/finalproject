@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Noah's Page</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background-image: url("https://i.pinimg.com/736x/ae/b3/b2/aeb3b270dd2ea109adce093fddf42879.jpg");
+      background-size: fit-content;
+      background-position: center;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    div.header {
+      text-align: center;
+      width: fill;
+      padding: 20px;
+
+      color: black;
+      background-color: #c19a6b;
+      font-size: xx-large;
+      font-family: Helvetica Neue ,Arial, Helvetica, sans-serif;
+      margin: auto;
+
+      opacity: 0;
+      transform: translateY(45px);
+      animation: fadein ease-in-out;
+      animation: fadein forwards;
+      animation-duration: 1s;
+      animation-delay: 0s;
+    }
+      @keyframes fadein {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .navi {
+      overflow: hidden;
+      background-color: #2b2b2b;
+      position: sticky;
+      /*https://www.w3schools.com/howto/howto_js_navbar_sticky.asp */
+      display: flex;
+      top: 0;
+      width: auto;
+      height: 40px;
+      align-items: center;
+      
+      
+      opacity: 0;
+      transform: translateY(45px);
+      animation: fadein ease-in-out;
+      animation: fadein forwards;
+      animation-duration: 1s;
+      animation-delay: 0.2s;
+      z-index: 50;
+    }
+    .navi a {
+      float: left;
+      color: #ffffff;
+      text-align: center;
+      font-size: 15px;
+      text-decoration: none;
+      padding: 20px 20px;
+    }
+    .navi a:hover {
+      background-color: rgb(120, 119, 119);
+      color: black;
+    }
+
+    .body {
+      /*animations*/
+      opacity: 0;
+      transform: translateY(45px);
+      animation: fadein ease-in-out;
+      animation: fadein forwards;
+      animation-duration: 1s;
+      animation-delay: 0.5s;
+    }
+    
+    .basicinfo {
+      /*copy this for all body stuff*/
+      animation: fadein;
+      opacity: 0;
+      transform: translateY(45px);
+      animation: fadein ease-in-out;
+      animation: fadein forwards;
+      animation-duration: 1s;
+      animation-delay: 0.5s;
+
+      width: 100%;
+      height: 350px;
+      padding: 10px;
+      float: left;
+      display: flex;
+      align-items: flex-start;
+      margin-top: 30px;
+      margin-bottom: 30px;
+      background-color: #edc9af;
+      text-align: left;
+    }
+
+    img.visual {
+      /*copy this for all body stuff*/
+      float: inline-start;
+      width: 20%;
+      height: fit-content;
+      animation: fadein;
+      opacity: 0;
+      transform: translateY(45px);
+      animation: fadein ease-in-out;
+      animation: fadein forwards;
+      animation-duration: 1s;
+      animation-delay: 0.5s;
+    }
+
+    .info {
+      /*copy this for all body stuff*/
+      height: auto;
+      float: left;
+      word-wrap: normal;
+
+      animation: fadein;
+      padding: 15px;
+      opacity: 0;
+      transform: translateY(45px);
+      animation: fadein ease-in-out;
+      animation: fadein forwards;
+      animation-duration: 1s;
+      animation-delay: 0.7s;
+    }
+    strong.label {
+      font-size: 18px;
+    }
+    span.infotext {
+      font-size: 18px;
+      font-style: italic;
+    }
+    
+    .morefacts {
+      animation: fadein;
+      opacity: 0;
+      transform: translateY(45px);
+      animation: fadein ease-in-out;
+      animation: fadein forwards;
+      animation-duration: 1s;
+      animation-delay: 0.5s;
+
+      width: 100%;
+      overflow: hidden;
+
+      height: 350px;
+      padding: 10px;
+      padding-top: 20px;
+      margin-top: 30px;
+      margin-bottom: 30px;
+      background-color: #cfb095;
+      display: flex;
+      justify-content: center; /* horizontal */
+      align-items: center;
+      text-align: center;
+    }
+
+    div.factsdisplay {
+      animation: fadein;
+      opacity: 0;
+      transform: translateY(45px);
+      animation: fadein ease-in-out;
+      animation: fadein forwards;
+      animation-duration: 1s;
+      animation-delay: 0.5s;
+
+      height: 300px;
+      width: 75%;
+      background-color: #cfb095;
+      opacity: 75%;
+      margin-top: 10px;
+
+      float: left;
+      display: flex;
+      align-items: flex-start;
+      text-align: justify;
+    }
+
+    .likesimg {
+      height: 300px;
+      width: 200px;
+      min-width: 200px;
+      margin-right: 50px;
+      background-size: cover;
+      background-position: center;
+      animation: likesvisual 18s infinite, fadein 1s ease-in-out forwards;
+      animation-delay: 0s, 0.5s;
+    }
+
+    @keyframes likesvisual {
+      0% {background-image: url("https://i.pinimg.com/736x/cc/03/82/cc038271a662d5b066d27323b5f1212a.jpg");}
+      33% {background-image: url("https://i.pinimg.com/736x/29/80/44/2980445a65ab4a7c2420b7733eed829d.jpg");}
+      66% {background-image: url("https://i.pinimg.com/736x/c5/4c/58/c54c5809b014d99723f209ba615c0f09.jpg");}
+      100% {background-image: url("https://i.pinimg.com/736x/cc/03/82/cc038271a662d5b066d27323b5f1212a.jpg");}
+    }
+
+    .familyimg {
+      height: 250px;
+      width: 1700px;
+      min-width: 200px;
+      margin-right: 50px;
+      background-size: cover;
+      background-position: center;
+      background-image: url(KakaoTalk_20250609_224424870.jpg);
+    }
+
+    span.igsl {
+      color: black;
+    }
+
+    footer {
+      text-align: left;
+      width: 100%;
+
+      color: black;
+      background-color: darkgray;
+      font-size: 15px;
+      font-family: Arial, Helvetica, sans-serif;
+      margin-top: 20px;
+      padding: 20px;
+
+      clear: both;
+      flex: flex-end;
+
+      /*animations*/
+      opacity: 0;
+      transform: translateY(45px);
+      animation: fadein ease-in-out;
+      animation: fadein forwards;
+      animation-duration: 1s;
+      animation-delay: 0s;
+    }
+    
+  </style>
+  <body>
+    <div class="header">Noah's Page</div>
+    <div class="navi">
+      <a href="index.html">Home</a>
+      <a href="josiah.html">Josiah</a>
+      <a href="Noah.html">Noah</a>
+      <a href="simon.html">Simon</a>
+    </div>
+    <div class="basicinfo" >
+      <img class="visual" src="KakaoTalk_20250607_152904128.jpg">
+      <div class="info">
+        <p><strong class="label">First Name:</strong> <span class="infotext">Noah Jedd</span></p>
+        <p><strong class="label">Family Name:</strong> <span class="infotext">Agustin</span></p>
+        <p><strong class="label">Age:</strong> <span class="infotext">22</span></p>
+        <p><strong class="label">Birth Date:</strong> <span class="infotext">Nov. 4, 2002</span></p>
+        <p><strong class="label">Nationality:</strong> <span class="infotext">Filipino</span></p>
+        <p><strong class="label">About:</strong> 
+          <span class="infotext">My name is Noah Jedd Agustin and I'm currently a 3rd Year international 
+            student at Handong Global University. Although I was born and raised in the Philippines for most of
+           my life, 19 years before moving to Korea for University, I am also the son of missionary parents and 
+           grew up in an international seminary rather than with other local Filipinos. This helped me adjust well
+           to the HGU environment very well. Other fun facts about me are...</span></p>
+      </div>
+    </div>
+    <div class="morefacts">
+      <div class="factsdisplay">
+        <div class="likesimg"></div>
+        <div class="info">
+          <p><strong class="label">I like Volleyball...</strong> <span class="infotext">Since the Spring Semester of 2024, I started to really enjoy playing Volleyball. Most of my friends in HGU used to know me for participating in a Korean Dance Club, but since I started playing Volleyball, it has been so much more fun.</span></p>
+          <p><strong class="label">I love McDonald's...</strong> <span class="infotext">People who know me know that I really really like McDonald's, but I don't think most people know why. It has a deep and sentimental connection for me, and most of the time I don't take the time to explain it because maybe people aren't interest. If you're curious and want a genuine answer, let me know!</span></p>
+          <p><strong class="label">I like the color green...</strong> <span class="infotext">Although green is one of the most common colors you could come across, I think the color green has much more appeal than simply representing nature. To me, the color green has a sense of prestige and calm.</span></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="morefacts">
+      <div class="factsdisplay">
+        <div class="info">
+          <p><strong class="label">We are the Agustins!..</strong> <span class="infotext">I am the youngest son of three boys, and because we were born from Missionary parents, we all have names that came from the Bible: Nathan Joel, the eldest; Timothy Jon, the second; and me, Noah Jedd.</span></p>
+          <br>
+          <p><strong class="label">My parents...</strong> <span class="infotext">Are my best friends. They work as missionaries for Campus Crusade, or Cru for short, and also teach in an international seminary called <a href="https://igsl.asia" target="_blank"><span class="igsl">"International Graduate School of Leadership"</span></a> in the Philippines that helps develop and grow aspiring missionaries and pastors. It was in that international seminary where I grew up, which is why English is my first language, and it is hard for me to connect with other Filipinos.</span></p>
+        </div>
+        <div class="familyimg"></div>
+      </div>
+    </div>
+
+    <footer>
+      Page Author: Noah Jedd<br />
+      Created for: Intro to Front-End Programming Course, 2025-1<br />
+      Created : 06/07/2025
+    </footer>  
+  </body>
+</html>

@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background-image: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/d5296831-5258-47be-a02c-0f531717c998/dhillpc-0ad6f939-692e-4a44-b6a0-4fcb23d0b0ed.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2Q1Mjk2ODMxLTUyNTgtNDdiZS1hMDJjLTBmNTMxNzE3Yzk5OFwvZGhpbGxwYy0wYWQ2ZjkzOS02OTJlLTRhNDQtYjZhMC00ZmNiMjNkMGIwZWQuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.RG4LiKGfUywD2UC4-8PRbSIB2RyKwxgYmAtKJfk7i3M);
+      font-family: Arial, Helvetica, sans-serif;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+    @keyframes fadeintitle {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    div.header {
+      text-align: center;
+      width: 100%;
+
+      color: black;
+      background-color: darkgray;
+      font-size: xx-large;
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+      padding: 20px;
+
+      /*animations*/
+      opacity: 0;
+      transform: translateY(45px);
+      animation: fadeinmenu ease-in-out;
+      animation: fadeinmenu forwards;
+      animation-duration: 1s;
+      animation-delay: 0s;
+    }
+
+    @keyframes fadeinmenu {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .navi {
+      overflow: hidden;
+      background-color: #2b2b2b;
+      position: sticky;
+      /*https://www.w3schools.com/howto/howto_js_navbar_sticky.asp */
+      top: 0;
+      width: 100%;
+      display: flex;
+      height: 40px;
+      margin: 0;
+      align-items: center;
+
+      /*animations*/
+      opacity: 0;
+      transform: translateY(45px);
+      animation: fadeinmenu ease-in-out;
+      animation: fadeinmenu forwards;
+      animation-duration: 1s;
+      animation-delay: 0.2s;
+      z-index: 50;
+    }
+    .navi a {
+      float: left;
+      color: #ffffff;
+      text-align: center;
+      font-size: 15px;
+      text-decoration: none;
+      padding: 20px 20px;
+    }
+    .navi a:hover {
+      background-color: rgb(120, 119, 119);
+      color: black;
+    }
+
+    @keyframes fadebody {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .body {
+      /*animations*/
+      opacity: 0;
+      transform: translateY(45px);
+      animation: fadebody ease-in-out;
+      animation: fadebody forwards;
+      animation-duration: 1s;
+      animation-delay: 0.5s;
+    }
+
+    @keyframes fadebody {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    img.headshot {
+      /*copy this for all body stuff*/
+      width: 25vw;
+      min-width: 100px;
+      height: auto;
+      float: left;
+      padding: 20px;
+      animation: fadebody;
+      opacity: 0;
+      transform: translateY(45px);
+      animation: fadebody ease-in-out;
+      animation: fadebody forwards;
+      animation-duration: 1s;
+      animation-delay: 0.5s;
+    }
+    .info {
+      /*copy this for all body stuff*/
+      flex: 1; /* akes up remaining space */
+      opacity: 0;
+      transform: translateY(45px);
+      animation: fadebody ease-in-out forwards;
+      animation-duration: 1s;
+      animation-delay: 0.5s;
+      padding: 20px;
+      font-size: min(
+        2vw,
+        25px
+      ); /**https://css-tricks.com/how-do-you-do-max-font-size-in-css/ **/
+    }
+    .hobby {
+      /*copy this for all body stuff*/
+      flex: 1; /* Takes up remaining space */
+      opacity: 0;
+      transform: translateY(45px);
+      animation: fadebody ease-in-out forwards;
+      animation-duration: 1s;
+      animation-delay: 0.5s;
+
+      justify-content: center;
+      width: 50%;
+      border: 3px solid darkgrey;
+
+      padding: 10px;
+      margin: auto;
+      background-color: lightblue;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      list-style-position: inside;
+      font-size: min(
+        2vw,
+        25px
+      ); /**https://css-tricks.com/how-do-you-do-max-font-size-in-css/ **/
+    }
+    strong.name {
+      font-size: min(2vw, 25px);
+    }
+    div.author {
+      clear: both;
+      flex: flex-end;
+    }
+    .profile {
+      overflow: hidden;
+    }
+
+    @keyframes cycle {
+      0% {
+        background-image: url("https://m.media-amazon.com/images/I/61STrTHHI-L._AC_UF894,1000_QL80_.jpg");
+      }
+      25% {
+        background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTKFNhO3cauC8g2z4GmgFsB-LrKmKO2dwkUA&s");
+      }
+      50% {
+        background-image: url("https://snworksceo.imgix.net/cav/8d443aec-2090-4e9e-8793-6b95d830d89f.sized-1000x1000.JPG?w=1000");
+      }
+      75% {
+        background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTB_2MixE9LsveTrYOOZ0JA7RNnoE_30QaHQ&s");
+      }
+      100% {
+        background-image: url("https://m.media-amazon.com/images/I/61STrTHHI-L._AC_UF894,1000_QL80_.jpg");
+      }
+    }
+
+    .cell {
+      width: 50vw;
+      height: 50vw;
+      max-width: 400px;
+      max-height: 400px;
+      opacity: 0;
+      transform: translateY(45px);
+      margin: 20px;
+
+      background-size: cover;
+      background-position: center;
+      animation: cycle 10s infinite, fadebody 1s ease-in-out forwards;
+      animation-delay: 0s, 0.5s;
+    }
+    .center-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    footer {
+      text-align: left;
+      width: 100%;
+
+      color: black;
+      background-color: darkgray;
+      font-size: 15px;
+      font-family: Arial, Helvetica, sans-serif;
+      margin-top: 20px;
+      padding: 20px;
+
+      /*animations*/
+      opacity: 0;
+      transform: translateY(45px);
+      animation: fadeinmenu ease-in-out;
+      animation: fadeinmenu forwards;
+      animation-duration: 1s;
+      animation-delay: 0s;
+    }
+    .overlay {
+      background-color: rgba(255, 255, 255, 0.85);
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+
+      opacity: 0;
+      transform: translateY(45px);
+      animation: fadeinmenu ease-in-out;
+      animation: fadeinmenu forwards;
+      animation-duration: 1s;
+      animation-delay: 0s;
+    }
+  </style>
+  <body>
+    <div class="header">Josiah's page</div>
+    <div class="navi">
+      <a href="index.html">Home</a>
+      <a href="josiah.html">Josiah</a>
+      <a href="Noah.html">Noah</a>
+
+      <a href="simon.html">Simon</a>
+    </div>
+    <div class="overlay">
+      <div class="profile">
+        <img
+          class="headshot"
+          src="KakaoTalk_20250408_193433444.jpg"
+          alt="my face"
+        />
+        <div class="info">
+          <p><strong class="name"> Name: </strong>Josiah Collier</p>
+
+          <p><strong class="name"> Age: </strong>20</p>
+
+          <p><strong class="name"> Nationality: </strong>American</p>
+
+          <p>
+            <strong class="name"> About: </strong>My name is Josiah Collier, I'm
+            20 years old, and I am Korean-American. I was born in the USA, and
+            lived there for roughly 5 years before I moved to South Korea, where
+            I have been living since 2010.
+          </p>
+        </div>
+      </div>
+      <div class="center-wrapper">
+        <div class="cell"></div>
+      </div>
+
+      <div class="hobby">
+        <p>Here are some of my hobbies</p>
+        <ul>
+          <li>Playing volleyball</li>
+          <li>Travelling</li>
+          <li>Going to the Gym</li>
+          <li>Playing Video Games</li>
+        </ul>
+      </div>
+      <div class="author">
+        <footer>
+          Page Author: Josiah Collier <br />
+          Created for: Intro to Front-End Programming Course, 2025-1<br />
+          Created : 06/07/2025
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>
